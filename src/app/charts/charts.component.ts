@@ -38,8 +38,6 @@ export class ChartsComponent implements OnInit {
   @ViewChild('valueTooltip', { static: true })
   private valueTooltip: TemplateRef<object>;
 
-  filterDataLoaded = new Subject<void>();
-
   public weeklyProgressReportRawData: WeeklyPurchaseProgressItem[];
   public weeklyProgressReportAllDataAfterCalc: WeeklyPurchaseProgressItem[];
   public weeklyProgressReportDisplayData: WeeklyPurchaseProgressItem[];

@@ -16,7 +16,7 @@ import { ChartsComponent } from './charts/charts.component';
 export class AppComponent {
   selectedTabInCharts: number;
   constructor(private modalService: NgbModal) {}
-  openChartsModal(content) {
+  openChartsModal() {
     const modalRef = this.modalService.open(ChartsComponent, {
       centered: true,
       backdrop: 'static',
