@@ -1,15 +1,30 @@
-import { Component, VERSION } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  TemplateRef,
+  Input,
+} from '@angular/core';
 
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { ChartsComponent } from './charts/charts.component';
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
+  styleUrls: ['./app.component.scss'],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
-
-  public windowHeight: number = 0;
-  constructor() {
-    this.windowHeight = window.innerHeight;
+  selectedTabInCharts: number;
+  constructor(private modalService: NgbModal) {}
+  openChartsModal(content) {
+    const modalRef = this.modalService.open(ChartsComponent, {
+      centered: true,
+      backdrop: 'static',
+      fullscreen: true,
+    });
+    modalRef.result.then((result) => {
+      if (result) {
+      }
+    });
   }
 }
