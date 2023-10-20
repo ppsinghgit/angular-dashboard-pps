@@ -1,7 +1,6 @@
 import {
   DashboardModel,
   DashboardCollection,
-  ShowChartsInput,
   WeeklyPurchaseProgressItem,
 } from '../dashboard.model';
 import {
@@ -57,8 +56,6 @@ export class ChartsComponent implements OnInit {
   isModalDataNeedsToBeLoaded = true;
   selectedTabInCharts = 1; // 1 map, 2 rebate category, 3 line chart
   // eslint-disable-next-line new-cap
-  @Input()
-  showChartsInput: ShowChartsInput;
   totalEnrolledStoreBarChart: number;
 
   // eslint-disable-next-line require-jsdoc
